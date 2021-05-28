@@ -1,0 +1,1836 @@
+<!DOCTYPE html><html><head>
+      <title>slides</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <style>
+      /*!
+* reveal.js 4.0.2
+* https://revealjs.com
+* MIT licensed
+*
+* Copyright (C) 2020 Hakim El Hattab, https://hakim.se
+*/
+.reveal .r-stretch,.reveal .stretch{max-width:none;max-height:none}.reveal pre.r-stretch code,.reveal pre.stretch code{height:100%;max-height:100%;box-sizing:border-box}.reveal .r-fit-text{display:inline-block;white-space:nowrap}.reveal .r-stack{display:grid}.reveal .r-stack>*{grid-area:1/1;margin:auto}.reveal .r-hstack,.reveal .r-vstack{display:flex}.reveal .r-hstack img,.reveal .r-hstack video,.reveal .r-vstack img,.reveal .r-vstack video{min-width:0;min-height:0;-o-object-fit:contain;object-fit:contain}.reveal .r-vstack{flex-direction:column;align-items:center;justify-content:center}.reveal .r-hstack{flex-direction:row;align-items:center;justify-content:center}.reveal .items-stretch{align-items:stretch}.reveal .items-start{align-items:flex-start}.reveal .items-center{align-items:center}.reveal .items-end{align-items:flex-end}.reveal .justify-between{justify-content:space-between}.reveal .justify-around{justify-content:space-around}.reveal .justify-start{justify-content:flex-start}.reveal .justify-center{justify-content:center}.reveal .justify-end{justify-content:flex-end}html.reveal-full-page{width:100%;height:100%;height:100vh;height:calc(var(--vh,1vh) * 100);overflow:hidden}.reveal-viewport{height:100%;overflow:hidden;position:relative;line-height:1;margin:0;background-color:#fff;color:#000}.reveal .slides section .fragment{opacity:0;visibility:hidden;transition:all .2s ease;will-change:opacity}.reveal .slides section .fragment.visible{opacity:1;visibility:inherit}.reveal .slides section .fragment.disabled{transition:none}.reveal .slides section .fragment.grow{opacity:1;visibility:inherit}.reveal .slides section .fragment.grow.visible{transform:scale(1.3)}.reveal .slides section .fragment.shrink{opacity:1;visibility:inherit}.reveal .slides section .fragment.shrink.visible{transform:scale(.7)}.reveal .slides section .fragment.zoom-in{transform:scale(.1)}.reveal .slides section .fragment.zoom-in.visible{transform:none}.reveal .slides section .fragment.fade-out{opacity:1;visibility:inherit}.reveal .slides section .fragment.fade-out.visible{opacity:0;visibility:hidden}.reveal .slides section .fragment.semi-fade-out{opacity:1;visibility:inherit}.reveal .slides section .fragment.semi-fade-out.visible{opacity:.5;visibility:inherit}.reveal .slides section .fragment.strike{opacity:1;visibility:inherit}.reveal .slides section .fragment.strike.visible{text-decoration:line-through}.reveal .slides section .fragment.fade-up{transform:translate(0,40px)}.reveal .slides section .fragment.fade-up.visible{transform:translate(0,0)}.reveal .slides section .fragment.fade-down{transform:translate(0,-40px)}.reveal .slides section .fragment.fade-down.visible{transform:translate(0,0)}.reveal .slides section .fragment.fade-right{transform:translate(-40px,0)}.reveal .slides section .fragment.fade-right.visible{transform:translate(0,0)}.reveal .slides section .fragment.fade-left{transform:translate(40px,0)}.reveal .slides section .fragment.fade-left.visible{transform:translate(0,0)}.reveal .slides section .fragment.current-visible,.reveal .slides section .fragment.fade-in-then-out{opacity:0;visibility:hidden}.reveal .slides section .fragment.current-visible.current-fragment,.reveal .slides section .fragment.fade-in-then-out.current-fragment{opacity:1;visibility:inherit}.reveal .slides section .fragment.fade-in-then-semi-out{opacity:0;visibility:hidden}.reveal .slides section .fragment.fade-in-then-semi-out.visible{opacity:.5;visibility:inherit}.reveal .slides section .fragment.fade-in-then-semi-out.current-fragment{opacity:1;visibility:inherit}.reveal .slides section .fragment.highlight-blue,.reveal .slides section .fragment.highlight-current-blue,.reveal .slides section .fragment.highlight-current-green,.reveal .slides section .fragment.highlight-current-red,.reveal .slides section .fragment.highlight-green,.reveal .slides section .fragment.highlight-red{opacity:1;visibility:inherit}.reveal .slides section .fragment.highlight-red.visible{color:#ff2c2d}.reveal .slides section .fragment.highlight-green.visible{color:#17ff2e}.reveal .slides section .fragment.highlight-blue.visible{color:#1b91ff}.reveal .slides section .fragment.highlight-current-red.current-fragment{color:#ff2c2d}.reveal .slides section .fragment.highlight-current-green.current-fragment{color:#17ff2e}.reveal .slides section .fragment.highlight-current-blue.current-fragment{color:#1b91ff}.reveal:after{content:'';font-style:italic}.reveal iframe{z-index:1}.reveal a{position:relative}@keyframes bounce-right{0%,10%,25%,40%,50%{transform:translateX(0)}20%{transform:translateX(10px)}30%{transform:translateX(-5px)}}@keyframes bounce-left{0%,10%,25%,40%,50%{transform:translateX(0)}20%{transform:translateX(-10px)}30%{transform:translateX(5px)}}@keyframes bounce-down{0%,10%,25%,40%,50%{transform:translateY(0)}20%{transform:translateY(10px)}30%{transform:translateY(-5px)}}.reveal .controls{display:none;position:absolute;top:auto;bottom:12px;right:12px;left:auto;z-index:11;color:#000;pointer-events:none;font-size:10px}.reveal .controls button{position:absolute;padding:0;background-color:transparent;border:0;outline:0;cursor:pointer;color:currentColor;transform:scale(.9999);transition:color .2s ease,opacity .2s ease,transform .2s ease;z-index:2;pointer-events:auto;font-size:inherit;visibility:hidden;opacity:0;-webkit-appearance:none;-webkit-tap-highlight-color:transparent}.reveal .controls .controls-arrow:after,.reveal .controls .controls-arrow:before{content:'';position:absolute;top:0;left:0;width:2.6em;height:.5em;border-radius:.25em;background-color:currentColor;transition:all .15s ease,background-color .8s ease;transform-origin:.2em 50%;will-change:transform}.reveal .controls .controls-arrow{position:relative;width:3.6em;height:3.6em}.reveal .controls .controls-arrow:before{transform:translateX(.5em) translateY(1.55em) rotate(45deg)}.reveal .controls .controls-arrow:after{transform:translateX(.5em) translateY(1.55em) rotate(-45deg)}.reveal .controls .controls-arrow:hover:before{transform:translateX(.5em) translateY(1.55em) rotate(40deg)}.reveal .controls .controls-arrow:hover:after{transform:translateX(.5em) translateY(1.55em) rotate(-40deg)}.reveal .controls .controls-arrow:active:before{transform:translateX(.5em) translateY(1.55em) rotate(36deg)}.reveal .controls .controls-arrow:active:after{transform:translateX(.5em) translateY(1.55em) rotate(-36deg)}.reveal .controls .navigate-left{right:6.4em;bottom:3.2em;transform:translateX(-10px)}.reveal .controls .navigate-left.highlight{animation:bounce-left 2s 50 both ease-out}.reveal .controls .navigate-right{right:0;bottom:3.2em;transform:translateX(10px)}.reveal .controls .navigate-right .controls-arrow{transform:rotate(180deg)}.reveal .controls .navigate-right.highlight{animation:bounce-right 2s 50 both ease-out}.reveal .controls .navigate-up{right:3.2em;bottom:6.4em;transform:translateY(-10px)}.reveal .controls .navigate-up .controls-arrow{transform:rotate(90deg)}.reveal .controls .navigate-down{right:3.2em;bottom:-1.4em;padding-bottom:1.4em;transform:translateY(10px)}.reveal .controls .navigate-down .controls-arrow{transform:rotate(-90deg)}.reveal .controls .navigate-down.highlight{animation:bounce-down 2s 50 both ease-out}.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled{opacity:.3}.reveal .controls[data-controls-back-arrows=faded] .navigate-up.enabled:hover{opacity:1}.reveal .controls[data-controls-back-arrows=hidden] .navigate-up.enabled{opacity:0;visibility:hidden}.reveal .controls .enabled{visibility:visible;opacity:.9;cursor:pointer;transform:none}.reveal .controls .enabled.fragmented{opacity:.5}.reveal .controls .enabled.fragmented:hover,.reveal .controls .enabled:hover{opacity:1}.reveal:not(.rtl) .controls[data-controls-back-arrows=faded] .navigate-left.enabled{opacity:.3}.reveal:not(.rtl) .controls[data-controls-back-arrows=faded] .navigate-left.enabled:hover{opacity:1}.reveal:not(.rtl) .controls[data-controls-back-arrows=hidden] .navigate-left.enabled{opacity:0;visibility:hidden}.reveal.rtl .controls[data-controls-back-arrows=faded] .navigate-right.enabled{opacity:.3}.reveal.rtl .controls[data-controls-back-arrows=faded] .navigate-right.enabled:hover{opacity:1}.reveal.rtl .controls[data-controls-back-arrows=hidden] .navigate-right.enabled{opacity:0;visibility:hidden}.reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-down,.reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-up{display:none}.reveal:not(.has-vertical-slides) .controls .navigate-left,.reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-left{bottom:1.4em;right:5.5em}.reveal:not(.has-vertical-slides) .controls .navigate-right,.reveal[data-navigation-mode=linear].has-horizontal-slides .navigate-right{bottom:1.4em;right:.5em}.reveal:not(.has-horizontal-slides) .controls .navigate-up{right:1.4em;bottom:5em}.reveal:not(.has-horizontal-slides) .controls .navigate-down{right:1.4em;bottom:.5em}.reveal.has-dark-background .controls{color:#fff}.reveal.has-light-background .controls{color:#000}.reveal.no-hover .controls .controls-arrow:active:before,.reveal.no-hover .controls .controls-arrow:hover:before{transform:translateX(.5em) translateY(1.55em) rotate(45deg)}.reveal.no-hover .controls .controls-arrow:active:after,.reveal.no-hover .controls .controls-arrow:hover:after{transform:translateX(.5em) translateY(1.55em) rotate(-45deg)}@media screen and (min-width:500px){.reveal .controls[data-controls-layout=edges]{top:0;right:0;bottom:0;left:0}.reveal .controls[data-controls-layout=edges] .navigate-down,.reveal .controls[data-controls-layout=edges] .navigate-left,.reveal .controls[data-controls-layout=edges] .navigate-right,.reveal .controls[data-controls-layout=edges] .navigate-up{bottom:auto;right:auto}.reveal .controls[data-controls-layout=edges] .navigate-left{top:50%;left:.8em;margin-top:-1.8em}.reveal .controls[data-controls-layout=edges] .navigate-right{top:50%;right:.8em;margin-top:-1.8em}.reveal .controls[data-controls-layout=edges] .navigate-up{top:.8em;left:50%;margin-left:-1.8em}.reveal .controls[data-controls-layout=edges] .navigate-down{bottom:-.3em;left:50%;margin-left:-1.8em}}.reveal .progress{position:absolute;display:none;height:3px;width:100%;bottom:0;left:0;z-index:10;background-color:rgba(0,0,0,.2);color:#fff}.reveal .progress:after{content:'';display:block;position:absolute;height:10px;width:100%;top:-10px}.reveal .progress span{display:block;height:100%;width:100%;background-color:currentColor;transition:transform .8s cubic-bezier(.26,.86,.44,.985);transform-origin:0 0;transform:scaleX(0)}.reveal .slide-number{position:absolute;display:block;right:8px;bottom:8px;z-index:31;font-family:Helvetica,sans-serif;font-size:12px;line-height:1;color:#fff;background-color:rgba(0,0,0,.4);padding:5px}.reveal .slide-number a{color:currentColor}.reveal .slide-number-delimiter{margin:0 3px}.reveal{position:relative;width:100%;height:100%;overflow:hidden;touch-action:pinch-zoom}.reveal.embedded{touch-action:pan-y}.reveal .slides{position:absolute;width:100%;height:100%;top:0;right:0;bottom:0;left:0;margin:auto;pointer-events:none;overflow:visible;z-index:1;text-align:center;perspective:600px;perspective-origin:50% 40%}.reveal .slides>section{perspective:600px}.reveal .slides>section,.reveal .slides>section>section{display:none;position:absolute;width:100%;pointer-events:auto;z-index:10;transform-style:flat;transition:transform-origin .8s cubic-bezier(.26,.86,.44,.985),transform .8s cubic-bezier(.26,.86,.44,.985),visibility .8s cubic-bezier(.26,.86,.44,.985),opacity .8s cubic-bezier(.26,.86,.44,.985)}.reveal[data-transition-speed=fast] .slides section{transition-duration:.4s}.reveal[data-transition-speed=slow] .slides section{transition-duration:1.2s}.reveal .slides section[data-transition-speed=fast]{transition-duration:.4s}.reveal .slides section[data-transition-speed=slow]{transition-duration:1.2s}.reveal .slides>section.stack{padding-top:0;padding-bottom:0;pointer-events:none;height:100%}.reveal .slides>section.present,.reveal .slides>section>section.present{display:block;z-index:11;opacity:1}.reveal .slides>section:empty,.reveal .slides>section>section:empty,.reveal .slides>section>section[data-background-interactive],.reveal .slides>section[data-background-interactive]{pointer-events:none}.reveal.center,.reveal.center .slides,.reveal.center .slides section{min-height:0!important}.reveal .slides>section:not(.present),.reveal .slides>section>section:not(.present){pointer-events:none}.reveal.overview .slides>section,.reveal.overview .slides>section>section{pointer-events:auto}.reveal .slides>section.future,.reveal .slides>section.past,.reveal .slides>section>section.future,.reveal .slides>section>section.past{opacity:0}.reveal.slide section{-webkit-backface-visibility:hidden;backface-visibility:hidden}.reveal .slides>section[data-transition=slide].past,.reveal .slides>section[data-transition~=slide-out].past,.reveal.slide .slides>section:not([data-transition]).past{transform:translate(-150%,0)}.reveal .slides>section[data-transition=slide].future,.reveal .slides>section[data-transition~=slide-in].future,.reveal.slide .slides>section:not([data-transition]).future{transform:translate(150%,0)}.reveal .slides>section>section[data-transition=slide].past,.reveal .slides>section>section[data-transition~=slide-out].past,.reveal.slide .slides>section>section:not([data-transition]).past{transform:translate(0,-150%)}.reveal .slides>section>section[data-transition=slide].future,.reveal .slides>section>section[data-transition~=slide-in].future,.reveal.slide .slides>section>section:not([data-transition]).future{transform:translate(0,150%)}.reveal.linear section{-webkit-backface-visibility:hidden;backface-visibility:hidden}.reveal .slides>section[data-transition=linear].past,.reveal .slides>section[data-transition~=linear-out].past,.reveal.linear .slides>section:not([data-transition]).past{transform:translate(-150%,0)}.reveal .slides>section[data-transition=linear].future,.reveal .slides>section[data-transition~=linear-in].future,.reveal.linear .slides>section:not([data-transition]).future{transform:translate(150%,0)}.reveal .slides>section>section[data-transition=linear].past,.reveal .slides>section>section[data-transition~=linear-out].past,.reveal.linear .slides>section>section:not([data-transition]).past{transform:translate(0,-150%)}.reveal .slides>section>section[data-transition=linear].future,.reveal .slides>section>section[data-transition~=linear-in].future,.reveal.linear .slides>section>section:not([data-transition]).future{transform:translate(0,150%)}.reveal .slides section[data-transition=default].stack,.reveal.default .slides section.stack{transform-style:preserve-3d}.reveal .slides>section[data-transition=default].past,.reveal .slides>section[data-transition~=default-out].past,.reveal.default .slides>section:not([data-transition]).past{transform:translate3d(-100%,0,0) rotateY(-90deg) translate3d(-100%,0,0)}.reveal .slides>section[data-transition=default].future,.reveal .slides>section[data-transition~=default-in].future,.reveal.default .slides>section:not([data-transition]).future{transform:translate3d(100%,0,0) rotateY(90deg) translate3d(100%,0,0)}.reveal .slides>section>section[data-transition=default].past,.reveal .slides>section>section[data-transition~=default-out].past,.reveal.default .slides>section>section:not([data-transition]).past{transform:translate3d(0,-300px,0) rotateX(70deg) translate3d(0,-300px,0)}.reveal .slides>section>section[data-transition=default].future,.reveal .slides>section>section[data-transition~=default-in].future,.reveal.default .slides>section>section:not([data-transition]).future{transform:translate3d(0,300px,0) rotateX(-70deg) translate3d(0,300px,0)}.reveal .slides section[data-transition=convex].stack,.reveal.convex .slides section.stack{transform-style:preserve-3d}.reveal .slides>section[data-transition=convex].past,.reveal .slides>section[data-transition~=convex-out].past,.reveal.convex .slides>section:not([data-transition]).past{transform:translate3d(-100%,0,0) rotateY(-90deg) translate3d(-100%,0,0)}.reveal .slides>section[data-transition=convex].future,.reveal .slides>section[data-transition~=convex-in].future,.reveal.convex .slides>section:not([data-transition]).future{transform:translate3d(100%,0,0) rotateY(90deg) translate3d(100%,0,0)}.reveal .slides>section>section[data-transition=convex].past,.reveal .slides>section>section[data-transition~=convex-out].past,.reveal.convex .slides>section>section:not([data-transition]).past{transform:translate3d(0,-300px,0) rotateX(70deg) translate3d(0,-300px,0)}.reveal .slides>section>section[data-transition=convex].future,.reveal .slides>section>section[data-transition~=convex-in].future,.reveal.convex .slides>section>section:not([data-transition]).future{transform:translate3d(0,300px,0) rotateX(-70deg) translate3d(0,300px,0)}.reveal .slides section[data-transition=concave].stack,.reveal.concave .slides section.stack{transform-style:preserve-3d}.reveal .slides>section[data-transition=concave].past,.reveal .slides>section[data-transition~=concave-out].past,.reveal.concave .slides>section:not([data-transition]).past{transform:translate3d(-100%,0,0) rotateY(90deg) translate3d(-100%,0,0)}.reveal .slides>section[data-transition=concave].future,.reveal .slides>section[data-transition~=concave-in].future,.reveal.concave .slides>section:not([data-transition]).future{transform:translate3d(100%,0,0) rotateY(-90deg) translate3d(100%,0,0)}.reveal .slides>section>section[data-transition=concave].past,.reveal .slides>section>section[data-transition~=concave-out].past,.reveal.concave .slides>section>section:not([data-transition]).past{transform:translate3d(0,-80%,0) rotateX(-70deg) translate3d(0,-80%,0)}.reveal .slides>section>section[data-transition=concave].future,.reveal .slides>section>section[data-transition~=concave-in].future,.reveal.concave .slides>section>section:not([data-transition]).future{transform:translate3d(0,80%,0) rotateX(70deg) translate3d(0,80%,0)}.reveal .slides section[data-transition=zoom],.reveal.zoom .slides section:not([data-transition]){transition-timing-function:ease}.reveal .slides>section[data-transition=zoom].past,.reveal .slides>section[data-transition~=zoom-out].past,.reveal.zoom .slides>section:not([data-transition]).past{visibility:hidden;transform:scale(16)}.reveal .slides>section[data-transition=zoom].future,.reveal .slides>section[data-transition~=zoom-in].future,.reveal.zoom .slides>section:not([data-transition]).future{visibility:hidden;transform:scale(.2)}.reveal .slides>section>section[data-transition=zoom].past,.reveal .slides>section>section[data-transition~=zoom-out].past,.reveal.zoom .slides>section>section:not([data-transition]).past{transform:scale(16)}.reveal .slides>section>section[data-transition=zoom].future,.reveal .slides>section>section[data-transition~=zoom-in].future,.reveal.zoom .slides>section>section:not([data-transition]).future{transform:scale(.2)}.reveal.cube .slides{perspective:1300px}.reveal.cube .slides section{padding:30px;min-height:700px;-webkit-backface-visibility:hidden;backface-visibility:hidden;box-sizing:border-box;transform-style:preserve-3d}.reveal.center.cube .slides section{min-height:0}.reveal.cube .slides section:not(.stack):before{content:'';position:absolute;display:block;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.1);border-radius:4px;transform:translateZ(-20px)}.reveal.cube .slides section:not(.stack):after{content:'';position:absolute;display:block;width:90%;height:30px;left:5%;bottom:0;background:0 0;z-index:1;border-radius:4px;box-shadow:0 95px 25px rgba(0,0,0,.2);transform:translateZ(-90px) rotateX(65deg)}.reveal.cube .slides>section.stack{padding:0;background:0 0}.reveal.cube .slides>section.past{transform-origin:100% 0;transform:translate3d(-100%,0,0) rotateY(-90deg)}.reveal.cube .slides>section.future{transform-origin:0 0;transform:translate3d(100%,0,0) rotateY(90deg)}.reveal.cube .slides>section>section.past{transform-origin:0 100%;transform:translate3d(0,-100%,0) rotateX(90deg)}.reveal.cube .slides>section>section.future{transform-origin:0 0;transform:translate3d(0,100%,0) rotateX(-90deg)}.reveal.page .slides{perspective-origin:0 50%;perspective:3000px}.reveal.page .slides section{padding:30px;min-height:700px;box-sizing:border-box;transform-style:preserve-3d}.reveal.page .slides section.past{z-index:12}.reveal.page .slides section:not(.stack):before{content:'';position:absolute;display:block;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,.1);transform:translateZ(-20px)}.reveal.page .slides section:not(.stack):after{content:'';position:absolute;display:block;width:90%;height:30px;left:5%;bottom:0;background:0 0;z-index:1;border-radius:4px;box-shadow:0 95px 25px rgba(0,0,0,.2);-webkit-transform:translateZ(-90px) rotateX(65deg)}.reveal.page .slides>section.stack{padding:0;background:0 0}.reveal.page .slides>section.past{transform-origin:0 0;transform:translate3d(-40%,0,0) rotateY(-80deg)}.reveal.page .slides>section.future{transform-origin:100% 0;transform:translate3d(0,0,0)}.reveal.page .slides>section>section.past{transform-origin:0 0;transform:translate3d(0,-40%,0) rotateX(80deg)}.reveal.page .slides>section>section.future{transform-origin:0 100%;transform:translate3d(0,0,0)}.reveal .slides section[data-transition=fade],.reveal.fade .slides section:not([data-transition]),.reveal.fade .slides>section>section:not([data-transition]){transform:none;transition:opacity .5s}.reveal.fade.overview .slides section,.reveal.fade.overview .slides>section>section{transition:none}.reveal .slides section[data-transition=none],.reveal.none .slides section:not([data-transition]){transform:none;transition:none}.reveal .pause-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;visibility:hidden;opacity:0;z-index:100;transition:all 1s ease}.reveal .pause-overlay .resume-button{position:absolute;bottom:20px;right:20px;color:#ccc;border-radius:2px;padding:6px 14px;border:2px solid #ccc;font-size:16px;background:0 0;cursor:pointer}.reveal .pause-overlay .resume-button:hover{color:#fff;border-color:#fff}.reveal.paused .pause-overlay{visibility:visible;opacity:1}.reveal .no-transition,.reveal .no-transition *,.reveal .slides.disable-slide-transitions section{transition:none!important}.reveal .slides.disable-slide-transitions section{transform:none!important}.reveal .backgrounds{position:absolute;width:100%;height:100%;top:0;left:0;perspective:600px}.reveal .slide-background{display:none;position:absolute;width:100%;height:100%;opacity:0;visibility:hidden;overflow:hidden;background-color:rgba(0,0,0,0);transition:all .8s cubic-bezier(.26,.86,.44,.985)}.reveal .slide-background-content{position:absolute;width:100%;height:100%;background-position:50% 50%;background-repeat:no-repeat;background-size:cover}.reveal .slide-background.stack{display:block}.reveal .slide-background.present{opacity:1;visibility:visible;z-index:2}.print-pdf .reveal .slide-background{opacity:1!important;visibility:visible!important}.reveal .slide-background video{position:absolute;width:100%;height:100%;max-width:none;max-height:none;top:0;left:0;-o-object-fit:cover;object-fit:cover}.reveal .slide-background[data-background-size=contain] video{-o-object-fit:contain;object-fit:contain}.reveal>.backgrounds .slide-background[data-background-transition=none],.reveal[data-background-transition=none]>.backgrounds .slide-background{transition:none}.reveal>.backgrounds .slide-background[data-background-transition=slide],.reveal[data-background-transition=slide]>.backgrounds .slide-background{opacity:1;-webkit-backface-visibility:hidden;backface-visibility:hidden}.reveal>.backgrounds .slide-background.past[data-background-transition=slide],.reveal[data-background-transition=slide]>.backgrounds .slide-background.past{transform:translate(-100%,0)}.reveal>.backgrounds .slide-background.future[data-background-transition=slide],.reveal[data-background-transition=slide]>.backgrounds .slide-background.future{transform:translate(100%,0)}.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=slide],.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.past{transform:translate(0,-100%)}.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=slide],.reveal[data-background-transition=slide]>.backgrounds .slide-background>.slide-background.future{transform:translate(0,100%)}.reveal>.backgrounds .slide-background.past[data-background-transition=convex],.reveal[data-background-transition=convex]>.backgrounds .slide-background.past{opacity:0;transform:translate3d(-100%,0,0) rotateY(-90deg) translate3d(-100%,0,0)}.reveal>.backgrounds .slide-background.future[data-background-transition=convex],.reveal[data-background-transition=convex]>.backgrounds .slide-background.future{opacity:0;transform:translate3d(100%,0,0) rotateY(90deg) translate3d(100%,0,0)}.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=convex],.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.past{opacity:0;transform:translate3d(0,-100%,0) rotateX(90deg) translate3d(0,-100%,0)}.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=convex],.reveal[data-background-transition=convex]>.backgrounds .slide-background>.slide-background.future{opacity:0;transform:translate3d(0,100%,0) rotateX(-90deg) translate3d(0,100%,0)}.reveal>.backgrounds .slide-background.past[data-background-transition=concave],.reveal[data-background-transition=concave]>.backgrounds .slide-background.past{opacity:0;transform:translate3d(-100%,0,0) rotateY(90deg) translate3d(-100%,0,0)}.reveal>.backgrounds .slide-background.future[data-background-transition=concave],.reveal[data-background-transition=concave]>.backgrounds .slide-background.future{opacity:0;transform:translate3d(100%,0,0) rotateY(-90deg) translate3d(100%,0,0)}.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=concave],.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.past{opacity:0;transform:translate3d(0,-100%,0) rotateX(-90deg) translate3d(0,-100%,0)}.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=concave],.reveal[data-background-transition=concave]>.backgrounds .slide-background>.slide-background.future{opacity:0;transform:translate3d(0,100%,0) rotateX(90deg) translate3d(0,100%,0)}.reveal>.backgrounds .slide-background[data-background-transition=zoom],.reveal[data-background-transition=zoom]>.backgrounds .slide-background{transition-timing-function:ease}.reveal>.backgrounds .slide-background.past[data-background-transition=zoom],.reveal[data-background-transition=zoom]>.backgrounds .slide-background.past{opacity:0;visibility:hidden;transform:scale(16)}.reveal>.backgrounds .slide-background.future[data-background-transition=zoom],.reveal[data-background-transition=zoom]>.backgrounds .slide-background.future{opacity:0;visibility:hidden;transform:scale(.2)}.reveal>.backgrounds .slide-background>.slide-background.past[data-background-transition=zoom],.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.past{opacity:0;visibility:hidden;transform:scale(16)}.reveal>.backgrounds .slide-background>.slide-background.future[data-background-transition=zoom],.reveal[data-background-transition=zoom]>.backgrounds .slide-background>.slide-background.future{opacity:0;visibility:hidden;transform:scale(.2)}.reveal[data-transition-speed=fast]>.backgrounds .slide-background{transition-duration:.4s}.reveal[data-transition-speed=slow]>.backgrounds .slide-background{transition-duration:1.2s}.reveal [data-auto-animate-target^=unmatched]{will-change:opacity}.reveal section[data-auto-animate]:not(.stack):not([data-auto-animate=running]) [data-auto-animate-target^=unmatched]{opacity:0}.reveal.overview{perspective-origin:50% 50%;perspective:700px}.reveal.overview .slides{-moz-transform-style:preserve-3d}.reveal.overview .slides section{height:100%;top:0!important;opacity:1!important;overflow:hidden;visibility:visible!important;cursor:pointer;box-sizing:border-box}.reveal.overview .slides section.present,.reveal.overview .slides section:hover{outline:10px solid rgba(150,150,150,.4);outline-offset:10px}.reveal.overview .slides section .fragment{opacity:1;transition:none}.reveal.overview .slides section:after,.reveal.overview .slides section:before{display:none!important}.reveal.overview .slides>section.stack{padding:0;top:0!important;background:0 0;outline:0;overflow:visible}.reveal.overview .backgrounds{perspective:inherit;-moz-transform-style:preserve-3d}.reveal.overview .backgrounds .slide-background{opacity:1;visibility:visible;outline:10px solid rgba(150,150,150,.1);outline-offset:10px}.reveal.overview .backgrounds .slide-background.stack{overflow:visible}.reveal.overview .slides section,.reveal.overview-deactivating .slides section{transition:none}.reveal.overview .backgrounds .slide-background,.reveal.overview-deactivating .backgrounds .slide-background{transition:none}.reveal.rtl .slides,.reveal.rtl .slides h1,.reveal.rtl .slides h2,.reveal.rtl .slides h3,.reveal.rtl .slides h4,.reveal.rtl .slides h5,.reveal.rtl .slides h6{direction:rtl;font-family:sans-serif}.reveal.rtl code,.reveal.rtl pre{direction:ltr}.reveal.rtl ol,.reveal.rtl ul{text-align:right}.reveal.rtl .progress span{transform-origin:100% 0}.reveal.has-parallax-background .backgrounds{transition:all .8s ease}.reveal.has-parallax-background[data-transition-speed=fast] .backgrounds{transition-duration:.4s}.reveal.has-parallax-background[data-transition-speed=slow] .backgrounds{transition-duration:1.2s}.reveal>.overlay{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1000;background:rgba(0,0,0,.9);transition:all .3s ease}.reveal>.overlay .spinner{position:absolute;display:block;top:50%;left:50%;width:32px;height:32px;margin:-16px 0 0 -16px;z-index:10;background-image:url(data:image/gif;base64,R0lGODlhIAAgAPMAAJmZmf%2F%2F%2F6%2Bvr8nJybW1tcDAwOjo6Nvb26ioqKOjo7Ozs%2FLy8vz8%2FAAAAAAAAAAAACH%2FC05FVFNDQVBFMi4wAwEAAAAh%2FhpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh%2BQQJCgAAACwAAAAAIAAgAAAE5xDISWlhperN52JLhSSdRgwVo1ICQZRUsiwHpTJT4iowNS8vyW2icCF6k8HMMBkCEDskxTBDAZwuAkkqIfxIQyhBQBFvAQSDITM5VDW6XNE4KagNh6Bgwe60smQUB3d4Rz1ZBApnFASDd0hihh12BkE9kjAJVlycXIg7CQIFA6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YJvpJivxNaGmLHT0VnOgSYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ%2FV%2FnmOM82XiHRLYKhKP1oZmADdEAAAh%2BQQJCgAAACwAAAAAIAAgAAAE6hDISWlZpOrNp1lGNRSdRpDUolIGw5RUYhhHukqFu8DsrEyqnWThGvAmhVlteBvojpTDDBUEIFwMFBRAmBkSgOrBFZogCASwBDEY%2FCZSg7GSE0gSCjQBMVG023xWBhklAnoEdhQEfyNqMIcKjhRsjEdnezB%2BA4k8gTwJhFuiW4dokXiloUepBAp5qaKpp6%2BHo7aWW54wl7obvEe0kRuoplCGepwSx2jJvqHEmGt6whJpGpfJCHmOoNHKaHx61WiSR92E4lbFoq%2BB6QDtuetcaBPnW6%2BO7wDHpIiK9SaVK5GgV543tzjgGcghAgAh%2BQQJCgAAACwAAAAAIAAgAAAE7hDISSkxpOrN5zFHNWRdhSiVoVLHspRUMoyUakyEe8PTPCATW9A14E0UvuAKMNAZKYUZCiBMuBakSQKG8G2FzUWox2AUtAQFcBKlVQoLgQReZhQlCIJesQXI5B0CBnUMOxMCenoCfTCEWBsJColTMANldx15BGs8B5wlCZ9Po6OJkwmRpnqkqnuSrayqfKmqpLajoiW5HJq7FL1Gr2mMMcKUMIiJgIemy7xZtJsTmsM4xHiKv5KMCXqfyUCJEonXPN2rAOIAmsfB3uPoAK%2B%2BG%2Bw48edZPK%2BM6hLJpQg484enXIdQFSS1u6UhksENEQAAIfkECQoAAAAsAAAAACAAIAAABOcQyEmpGKLqzWcZRVUQnZYg1aBSh2GUVEIQ2aQOE%2BG%2BcD4ntpWkZQj1JIiZIogDFFyHI0UxQwFugMSOFIPJftfVAEoZLBbcLEFhlQiqGp1Vd140AUklUN3eCA51C1EWMzMCezCBBmkxVIVHBWd3HHl9JQOIJSdSnJ0TDKChCwUJjoWMPaGqDKannasMo6WnM562R5YluZRwur0wpgqZE7NKUm%2BFNRPIhjBJxKZteWuIBMN4zRMIVIhffcgojwCF117i4nlLnY5ztRLsnOk%2BaV%2BoJY7V7m76PdkS4trKcdg0Zc0tTcKkRAAAIfkECQoAAAAsAAAAACAAIAAABO4QyEkpKqjqzScpRaVkXZWQEximw1BSCUEIlDohrft6cpKCk5xid5MNJTaAIkekKGQkWyKHkvhKsR7ARmitkAYDYRIbUQRQjWBwJRzChi9CRlBcY1UN4g0%2FVNB0AlcvcAYHRyZPdEQFYV8ccwR5HWxEJ02YmRMLnJ1xCYp0Y5idpQuhopmmC2KgojKasUQDk5BNAwwMOh2RtRq5uQuPZKGIJQIGwAwGf6I0JXMpC8C7kXWDBINFMxS4DKMAWVWAGYsAdNqW5uaRxkSKJOZKaU3tPOBZ4DuK2LATgJhkPJMgTwKCdFjyPHEnKxFCDhEAACH5BAkKAAAALAAAAAAgACAAAATzEMhJaVKp6s2nIkolIJ2WkBShpkVRWqqQrhLSEu9MZJKK9y1ZrqYK9WiClmvoUaF8gIQSNeF1Er4MNFn4SRSDARWroAIETg1iVwuHjYB1kYc1mwruwXKC9gmsJXliGxc%2BXiUCby9ydh1sOSdMkpMTBpaXBzsfhoc5l58Gm5yToAaZhaOUqjkDgCWNHAULCwOLaTmzswadEqggQwgHuQsHIoZCHQMMQgQGubVEcxOPFAcMDAYUA85eWARmfSRQCdcMe0zeP1AAygwLlJtPNAAL19DARdPzBOWSm1brJBi45soRAWQAAkrQIykShQ9wVhHCwCQCACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiRMDjI0Fd30%2FiI2UA5GSS5UDj2l6NoqgOgN4gksEBgYFf0FDqKgHnyZ9OX8HrgYHdHpcHQULXAS2qKpENRg7eAMLC7kTBaixUYFkKAzWAAnLC7FLVxLWDBLKCwaKTULgEwbLA4hJtOkSBNqITT3xEgfLpBtzE%2FjiuL04RGEBgwWhShRgQExHBAAh%2BQQJCgAAACwAAAAAIAAgAAAE7xDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfZiCqGk5dTESJeaOAlClzsJsqwiJwiqnFrb2nS9kmIcgEsjQydLiIlHehhpejaIjzh9eomSjZR%2BipslWIRLAgMDOR2DOqKogTB9pCUJBagDBXR6XB0EBkIIsaRsGGMMAxoDBgYHTKJiUYEGDAzHC9EACcUGkIgFzgwZ0QsSBcXHiQvOwgDdEwfFs0sDzt4S6BK4xYjkDOzn0unFeBzOBijIm1Dgmg5YFQwsCMjp1oJ8LyIAACH5BAkKAAAALAAAAAAgACAAAATwEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GGl6NoiPOH16iZKNlH6KmyWFOggHhEEvAwwMA0N9GBsEC6amhnVcEwavDAazGwIDaH1ipaYLBUTCGgQDA8NdHz0FpqgTBwsLqAbWAAnIA4FWKdMLGdYGEgraigbT0OITBcg5QwPT4xLrROZL6AuQAPUS7bxLpoWidY0JtxLHKhwwMJBTHgPKdEQAACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq%2BE71SRQeyqUToLA7VxF0JDyIQh%2FMVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GAULDJCRiXo1CpGXDJOUjY%2BYip9DhToJA4RBLwMLCwVDfRgbBAaqqoZ1XBMHswsHtxtFaH1iqaoGNgAIxRpbFAgfPQSqpbgGBqUD1wBXeCYp1AYZ19JJOYgH1KwA4UBvQwXUBxPqVD9L3sbp2BNk2xvvFPJd%2BMFCN6HAAIKgNggY0KtEBAAh%2BQQJCgAAACwAAAAAIAAgAAAE6BDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfYIDMaAFdTESJeaEDAIMxYFqrOUaNW4E4ObYcCXaiBVEgULe0NJaxxtYksjh2NLkZISgDgJhHthkpU4mW6blRiYmZOlh4JWkDqILwUGBnE6TYEbCgevr0N1gH4At7gHiRpFaLNrrq8HNgAJA70AWxQIH1%2BvsYMDAzZQPC9VCNkDWUhGkuE5PxJNwiUK4UfLzOlD4WvzAHaoG9nxPi5d%2BjYUqfAhhykOFwJWiAAAIfkECQoAAAAsAAAAACAAIAAABPAQyElpUqnqzaciSoVkXVUMFaFSwlpOCcMYlErAavhOMnNLNo8KsZsMZItJEIDIFSkLGQoQTNhIsFehRww2CQLKF0tYGKYSg%2BygsZIuNqJksKgbfgIGepNo2cIUB3V1B3IvNiBYNQaDSTtfhhx0CwVPI0UJe0%2Bbm4g5VgcGoqOcnjmjqDSdnhgEoamcsZuXO1aWQy8KAwOAuTYYGwi7w5h%2BKr0SJ8MFihpNbx%2B4Erq7BYBuzsdiH1jCAzoSfl0rVirNbRXlBBlLX%2BBP0XJLAPGzTkAuAOqb0WT5AH7OcdCm5B8TgRwSRKIHQtaLCwg1RAAAOwAAAAAAAAAAAA%3D%3D);visibility:visible;opacity:.6;transition:all .3s ease}.reveal>.overlay header{position:absolute;left:0;top:0;width:100%;padding:5px;z-index:2;box-sizing:border-box}.reveal>.overlay header a{display:inline-block;width:40px;height:40px;line-height:36px;padding:0 10px;float:right;opacity:.6;box-sizing:border-box}.reveal>.overlay header a:hover{opacity:1}.reveal>.overlay header a .icon{display:inline-block;width:20px;height:20px;background-position:50% 50%;background-size:100%;background-repeat:no-repeat}.reveal>.overlay header a.close .icon{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABkklEQVRYR8WX4VHDMAxG6wnoJrABZQPYBCaBTWAD2g1gE5gg6OOsXuxIlr40d81dfrSJ9V4c2VLK7spHuTJ/5wpM07QXuXc5X0opX2tEJcadjHuV80li/FgxTIEK/5QBCICBD6xEhSMGHgQPgBgLiYVAB1dpSqKDawxTohFw4JSEA3clzgIBPCURwE2JucBR7rhPJJv5OpJwDX+SfDjgx1wACQeJG1aChP9K/IMmdZ8DtESV1WyP3Bt4MwM6sj4NMxMYiqUWHQu4KYA/SYkIjOsm3BXYWMKFDwU2khjCQ4ELJUJ4SmClRArOCmSXGuKma0fYD5CbzHxFpCSGAhfAVSSUGDUk2BWZaff2g6GE15BsBQ9nwmpIGDiyHQddwNTMKkbZaf9fajXQca1EX44puJZUsnY0ObGmITE3GVLCbEhQUjGVt146j6oasWN+49Vph2w1pZ5EansNZqKBm1txbU57iRRcZ86RWMDdWtBJUHBHwoQPi1GV+JCbntmvok7iTX4/Up9mgyTc/FJYDTcndgH/AA5A/CHsyEkVAAAAAElFTkSuQmCC)}.reveal>.overlay header a.external .icon{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAcElEQVRYR+2WSQoAIQwEzf8f7XiOMkUQxUPlGkM3hVmiQfQR9GYnH1SsAQlI4DiBqkCMoNb9y2e90IAEJPAcgdznU9+engMaeJ7Azh5Y1U67gAho4DqBqmB1buAf0MB1AlVBek83ZPkmJMGc1wAR+AAqod/B97TRpQAAAABJRU5ErkJggg==)}.reveal>.overlay .viewport{position:absolute;display:flex;top:50px;right:0;bottom:0;left:0}.reveal>.overlay.overlay-preview .viewport iframe{width:100%;height:100%;max-width:100%;max-height:100%;border:0;opacity:0;visibility:hidden;transition:all .3s ease}.reveal>.overlay.overlay-preview.loaded .viewport iframe{opacity:1;visibility:visible}.reveal>.overlay.overlay-preview.loaded .viewport-inner{position:absolute;z-index:-1;left:0;top:45%;width:100%;text-align:center;letter-spacing:normal}.reveal>.overlay.overlay-preview .x-frame-error{opacity:0;transition:opacity .3s ease .3s}.reveal>.overlay.overlay-preview.loaded .x-frame-error{opacity:1}.reveal>.overlay.overlay-preview.loaded .spinner{opacity:0;visibility:hidden;transform:scale(.2)}.reveal>.overlay.overlay-help .viewport{overflow:auto;color:#fff}.reveal>.overlay.overlay-help .viewport .viewport-inner{width:600px;margin:auto;padding:20px 20px 80px 20px;text-align:center;letter-spacing:normal}.reveal>.overlay.overlay-help .viewport .viewport-inner .title{font-size:20px}.reveal>.overlay.overlay-help .viewport .viewport-inner table{border:1px solid #fff;border-collapse:collapse;font-size:16px}.reveal>.overlay.overlay-help .viewport .viewport-inner table td,.reveal>.overlay.overlay-help .viewport .viewport-inner table th{width:200px;padding:14px;border:1px solid #fff;vertical-align:middle}.reveal>.overlay.overlay-help .viewport .viewport-inner table th{padding-top:20px;padding-bottom:20px}.reveal .playback{position:absolute;left:15px;bottom:20px;z-index:30;cursor:pointer;transition:all .4s ease;-webkit-tap-highlight-color:transparent}.reveal.overview .playback{opacity:0;visibility:hidden}.reveal .hljs{min-height:100%}.reveal .hljs table{margin:initial}.reveal .hljs-ln-code,.reveal .hljs-ln-numbers{padding:0;border:0}.reveal .hljs-ln-numbers{opacity:.6;padding-right:.75em;text-align:right;vertical-align:top}.reveal .hljs.has-highlights tr:not(.highlight-line){opacity:.4}.reveal .hljs:not(:first-child).fragment{position:absolute;top:0;left:0;width:100%;box-sizing:border-box}.reveal pre[data-auto-animate-target]{overflow:hidden}.reveal pre[data-auto-animate-target] code{height:100%}.reveal .roll{display:inline-block;line-height:1.2;overflow:hidden;vertical-align:top;perspective:400px;perspective-origin:50% 50%}.reveal .roll:hover{background:0 0;text-shadow:none}.reveal .roll span{display:block;position:relative;padding:0 2px;pointer-events:none;transition:all .4s ease;transform-origin:50% 0;transform-style:preserve-3d;-webkit-backface-visibility:hidden;backface-visibility:hidden}.reveal .roll:hover span{background:rgba(0,0,0,.5);transform:translate3d(0,0,-45px) rotateX(90deg)}.reveal .roll span:after{content:attr(data-title);display:block;position:absolute;left:0;top:0;padding:0 2px;-webkit-backface-visibility:hidden;backface-visibility:hidden;transform-origin:50% 0;transform:translate3d(0,110%,0) rotateX(-90deg)}.reveal aside.notes{display:none}.reveal .speaker-notes{display:none;position:absolute;width:33.33333%;height:100%;top:0;left:100%;padding:14px 18px 14px 18px;z-index:1;font-size:18px;line-height:1.4;border:1px solid rgba(0,0,0,.05);color:#222;background-color:#f5f5f5;overflow:auto;box-sizing:border-box;text-align:left;font-family:Helvetica,sans-serif;-webkit-overflow-scrolling:touch}.reveal .speaker-notes .notes-placeholder{color:#ccc;font-style:italic}.reveal .speaker-notes:focus{outline:0}.reveal .speaker-notes:before{content:'Speaker notes';display:block;margin-bottom:10px;opacity:.5}.reveal.show-notes{max-width:75%;overflow:visible}.reveal.show-notes .speaker-notes{display:block}@media screen and (min-width:1600px){.reveal .speaker-notes{font-size:20px}}@media screen and (max-width:1024px){.reveal.show-notes{border-left:0;max-width:none;max-height:70%;max-height:70vh;overflow:visible}.reveal.show-notes .speaker-notes{top:100%;left:0;width:100%;height:42.85714%;height:30vh;border:0}}@media screen and (max-width:600px){.reveal.show-notes{max-height:60%;max-height:60vh}.reveal.show-notes .speaker-notes{top:100%;height:66.66667%;height:40vh}.reveal .speaker-notes{font-size:14px}}.zoomed .reveal *,.zoomed .reveal :after,.zoomed .reveal :before{-webkit-backface-visibility:visible!important;backface-visibility:visible!important}.zoomed .reveal .controls,.zoomed .reveal .progress{opacity:0}.zoomed .reveal .roll span{background:0 0}.zoomed .reveal .roll span:after{visibility:hidden}html.print-pdf *{-webkit-print-color-adjust:exact}html.print-pdf{width:100%;height:100%;overflow:visible}html.print-pdf body{margin:0 auto!important;border:0;padding:0;float:none!important;overflow:visible}html.print-pdf .nestedarrow,html.print-pdf .reveal .controls,html.print-pdf .reveal .playback,html.print-pdf .reveal .progress,html.print-pdf .reveal.overview,html.print-pdf .state-background{display:none!important}html.print-pdf .reveal pre code{overflow:hidden!important;font-family:Courier,'Courier New',monospace!important}html.print-pdf .reveal{width:auto!important;height:auto!important;overflow:hidden!important}html.print-pdf .reveal .slides{position:static;width:100%!important;height:auto!important;zoom:1!important;pointer-events:initial;left:auto;top:auto;margin:0!important;padding:0!important;overflow:visible;display:block;perspective:none;perspective-origin:50% 50%}html.print-pdf .reveal .slides .pdf-page{position:relative;overflow:hidden;z-index:1;page-break-after:always}html.print-pdf .reveal .slides section{visibility:visible!important;display:block!important;position:absolute!important;margin:0!important;padding:0!important;box-sizing:border-box!important;min-height:1px;opacity:1!important;transform-style:flat!important;transform:none!important}html.print-pdf .reveal section.stack{position:relative!important;margin:0!important;padding:0!important;page-break-after:avoid!important;height:auto!important;min-height:auto!important}html.print-pdf .reveal img{box-shadow:none}html.print-pdf .reveal .backgrounds{display:none}html.print-pdf .reveal .slide-background{display:block!important;position:absolute;top:0;left:0;width:100%;height:100%;z-index:auto!important}html.print-pdf .reveal.show-notes{max-width:none;max-height:none}html.print-pdf .reveal .speaker-notes-pdf{display:block;width:100%;height:auto;max-height:none;top:auto;right:auto;bottom:auto;left:auto;z-index:100}html.print-pdf .reveal .speaker-notes-pdf[data-layout=separate-page]{position:relative;color:inherit;background-color:transparent;padding:20px;page-break-after:always;border:0}html.print-pdf .reveal .slide-number-pdf{display:block;position:absolute;font-size:14px}html.print-pdf .aria-status{display:none}@media print{html:not(.print-pdf){background:#fff;width:auto;height:auto;overflow:visible}html:not(.print-pdf) body{background:#fff;font-size:20pt;width:auto;height:auto;border:0;margin:0 5%;padding:0;overflow:visible;float:none!important}html:not(.print-pdf) .controls,html:not(.print-pdf) .fork-reveal,html:not(.print-pdf) .nestedarrow,html:not(.print-pdf) .reveal .backgrounds,html:not(.print-pdf) .reveal .progress,html:not(.print-pdf) .reveal .slide-number,html:not(.print-pdf) .share-reveal,html:not(.print-pdf) .state-background{display:none!important}html:not(.print-pdf) body,html:not(.print-pdf) li,html:not(.print-pdf) p,html:not(.print-pdf) td{font-size:20pt!important;color:#000}html:not(.print-pdf) h1,html:not(.print-pdf) h2,html:not(.print-pdf) h3,html:not(.print-pdf) h4,html:not(.print-pdf) h5,html:not(.print-pdf) h6{color:#000!important;height:auto;line-height:normal;text-align:left;letter-spacing:normal}html:not(.print-pdf) h1{font-size:28pt!important}html:not(.print-pdf) h2{font-size:24pt!important}html:not(.print-pdf) h3{font-size:22pt!important}html:not(.print-pdf) h4{font-size:22pt!important;font-variant:small-caps}html:not(.print-pdf) h5{font-size:21pt!important}html:not(.print-pdf) h6{font-size:20pt!important;font-style:italic}html:not(.print-pdf) a:link,html:not(.print-pdf) a:visited{color:#000!important;font-weight:700;text-decoration:underline}html:not(.print-pdf) div,html:not(.print-pdf) ol,html:not(.print-pdf) p,html:not(.print-pdf) ul{visibility:visible;position:static;width:auto;height:auto;display:block;overflow:visible;margin:0;text-align:left!important}html:not(.print-pdf) .reveal pre,html:not(.print-pdf) .reveal table{margin-left:0;margin-right:0}html:not(.print-pdf) .reveal pre code{padding:20px}html:not(.print-pdf) .reveal blockquote{margin:20px 0}html:not(.print-pdf) .reveal .slides{position:static!important;width:auto!important;height:auto!important;left:0!important;top:0!important;margin-left:0!important;margin-top:0!important;padding:0!important;zoom:1!important;transform:none!important;overflow:visible!important;display:block!important;text-align:left!important;perspective:none;perspective-origin:50% 50%}html:not(.print-pdf) .reveal .slides section{visibility:visible!important;position:static!important;width:auto!important;height:auto!important;display:block!important;overflow:visible!important;left:0!important;top:0!important;margin-left:0!important;margin-top:0!important;padding:60px 20px!important;z-index:auto!important;opacity:1!important;page-break-after:always!important;transform-style:flat!important;transform:none!important;transition:none!important}html:not(.print-pdf) .reveal .slides section.stack{padding:0!important}html:not(.print-pdf) .reveal section:last-of-type{page-break-after:avoid!important}html:not(.print-pdf) .reveal section .fragment{opacity:1!important;visibility:visible!important;transform:none!important}html:not(.print-pdf) .reveal section img{display:block;margin:15px 0;background:#fff;border:1px solid #666;box-shadow:none}html:not(.print-pdf) .reveal section small{font-size:.8em}html:not(.print-pdf) .reveal .hljs{max-height:100%;white-space:pre-wrap;word-wrap:break-word;word-break:break-word;font-size:15pt}html:not(.print-pdf) .reveal .hljs .hljs-ln-numbers{white-space:nowrap}html:not(.print-pdf) .reveal .hljs td{font-size:inherit!important;color:inherit!important}}
+      
+      </style>
+      <link rel="stylesheet" href="file:///c:\Users\dtjve\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\reveal\css\theme\white.css">
+      <link rel="stylesheet" href="file:///c:\Users\dtjve\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      <link rel="stylesheet" href="file:///c:\Users\dtjve\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\font-awesome\css\font-awesome.min.css">
+      
+        <script src="file:///c:\Users\dtjve\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\reveal\lib\js\head.min.js"></script>
+        <script src="file:///c:\Users\dtjve\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\reveal\js\reveal.js"></script>
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * Darcula theme
+ *
+ * Adapted from a theme based on:
+ * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
+ *
+ * @author Alexandre Paradis <service.paradis@gmail.com>
+ * @version 1.0
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #a9b7c6;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    color: inherit;
+    background: rgba(33,66,131,.85);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    color: inherit;
+    background: rgba(33,66,131,.85);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2b2b2b;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+	color: #808080;
+}
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+	color: #cc7832;
+}
+
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+    color: #a9b7c6;
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+    color: #e8bf6a;
+}
+
+.token.entity,
+.token.number,
+.token.symbol {
+    color: #6897bb;
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+    color: #9876aa;
+}
+
+.token.string,
+.token.char {
+	color: #6a8759;
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+    color: #a5c261;
+}
+.token.attr-value .punctuation:first-child {
+    color: #a9b7c6;
+}
+
+.token.url {
+	color: #287bde;
+	text-decoration: underline;
+}
+
+.token.function {
+	color: #ffc66d;
+}
+
+.token.regex {
+    background: #364135;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.inserted {
+    background: #294436;
+}
+
+.token.deleted {
+    background: #484a4a;
+}
+
+/*code.language-css .token.punctuation {
+	color: #cc7832;
+}*/
+
+code.language-css .token.property,
+code.language-css .token.property + .token.punctuation {
+	color: #a9b7c6;
+}
+
+code.language-css .token.id {
+	color: #ffc66d;
+}
+
+code.language-css .token.selector > .token.class,
+code.language-css .token.selector > .token.attribute,
+code.language-css .token.selector > .token.pseudo-class,
+code.language-css .token.selector > .token.pseudo-element {
+	color: #ffc66d;
+}
+
+/* highlight */
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+  }
+  pre[data-line] .line-highlight-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+  }
+  
+  pre[data-line] .line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em;
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+  }
+  
+  pre[data-line] .line-highlight:before, 
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-start);
+	position: absolute;
+	top: .4em;
+	left: .6em;
+	min-width: 1em;
+	padding: 0 .5em;
+	background-color: hsla(24, 20%, 50%,.4);
+	color: hsl(24, 20%, 95%);
+	font: bold 65%/1.5 sans-serif;
+	text-align: center;
+	vertical-align: .3em;
+	border-radius: 999px;
+	text-shadow: none;
+	box-shadow: 0 1px white;
+  }
+  
+  pre[data-line] .line-highlight[data-end]:after {
+	content: attr(data-end);
+	top: auto;
+	bottom: .4em;
+  }.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+:root {
+  counter-reset: exercise 0;
+}
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.markdown-preview.markdown-preview .reveal .slides {
+  text-align: left;
+  font-size: 0.85em;
+}
+.markdown-preview.markdown-preview .reveal .slides i {
+  color: #7E40CC;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3 {
+  text-align: center;
+  color: #23214E;
+  margin-bottom: 1em;
+}
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  color: #23214E;
+  text-transform: none;
+  padding-top: 2em;
+}
+.markdown-preview.markdown-preview blockquote {
+  box-shadow: none;
+  font-size: 0.9em;
+  padding: 1em 0.5em;
+}
+.markdown-preview.markdown-preview blockquote span.author {
+  display: block;
+  text-align: right;
+  margin-top: 0.2em;
+}
+.markdown-preview.markdown-preview blockquote::before {
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  font-size: 3em;
+  font-weight: 900;
+  font-family: serif;
+  content: "''";
+  color: lightgray;
+  z-index: -1;
+}
+.markdown-preview.markdown-preview .exercise p {
+  font-size: 0.9em;
+}
+.markdown-preview.markdown-preview .exercise h1::before,
+.markdown-preview.markdown-preview .exercise h2::before,
+.markdown-preview.markdown-preview .exercise h3::before {
+  counter-increment: exercise;
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  color: #7E40CC;
+  content: ' ' counter(exercise);
+}
+.markdown-preview.markdown-preview li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+.markdown-preview.markdown-preview .row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.markdown-preview.markdown-preview .language-javascript {
+  border-left: 8px solid #F7DF1E;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .language-javascript::before {
+  content: '.js';
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+.markdown-preview.markdown-preview .language-python {
+  border-left: 8px solid #3877AA;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .language-python::before {
+  content: '.py';
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+
+      </style>
+    </head>
+    <body for="html-export" data-presentation-mode>
+      <div class="mume markdown-preview  " data-presentation-mode>
+      
+    <div style="display:none;"></div>
+    <div class="reveal">
+      <div class="slides">
+        <section class="center" lineno="10" data-line="10" data-h="0" data-v="0">
+<h1 class="mume-header" id="abstraction">Abstraction</h1>
+
+<p><i class="fa fa-user-secret" aria-hidden="true"></i> Jorard Andringa, David Veen</p>
+<p><i class="fa fa-tag" aria-hidden="true"></i> 21.5</p>
+</section><section lineno="17" class="slide " data-line="17" data-h="1" data-v="0">
+<h1 class="mume-header" id="agenda">Agenda</h1>
+
+<ul>
+<li>Philosophise about abstraction</li>
+<li>Why functions are contravariant in their argument</li>
+<li>Portals to different worlds</li>
+<li>Zen Mastery</li>
+</ul>
+</section><section lineno="24" class="slide " data-line="24" data-h="2" data-v="0">
+<h1 class="mume-header" id="agenda-1">Agenda</h1>
+
+<ul>
+<li>Philosophise</li>
+<li><s>Why functions are contravariant in their argument</s></li>
+<li>Cooking</li>
+<li>Portals to different worlds</li>
+<li>Zen Mastery</li>
+</ul>
+</section><section lineno="32" class="slide " data-line="32" data-h="3" data-v="0">
+<h2 class="mume-header" id="why-abstraction">Why abstraction?</h2>
+
+<ul>
+<li>fundamental to programming</li>
+<li>will change the way you view your craft</li>
+<li>(or not)</li>
+</ul>
+<aside class="notes">
+<p>abstractie is fundamenteel voor programmeren<br>
+ambitie: andere kijk op het vak programmeren</p>
+<p>of niet; maar we mogen ambiteus zijn?</p>
+</aside>
+</section><section lineno="47" class="slide " data-line="47" data-h="4" data-v="0">
+<h2 class="mume-header" id="difficulty-level">Difficulty level</h2>
+
+<p><meter style="width: 100%" value="0.65" high="0.5"></meter></p>
+<aside class="notes">
+<p>up to intermediate<br>
+paar jaar ervaring om alles mee te krijgen</p>
+</aside>
+</section><section class="center" data-background="#141414" lineno="57" data-line="57" data-h="5" data-v="0">
+<img src="..\assets\dontpanic.2021-05-24-15-03-46.png" height="650">
+<aside class="notes">
+<p>hitchhikers code:<br>
+je weet niet precies hoe je van A naar B kwam,<br>
+maar we hopen dat je van het uitzicht kunt genieten</p>
+</aside>
+</section><section lineno="67" class="slide " data-line="67" data-h="6" data-v="0">
+<h1 class="mume-header" id="philosophise">Philosophise</h1>
+
+</section><section lineno="70" class="slide " data-line="70" data-h="7" data-v="0">
+<h2 class="mume-header" id="what-is-abstraction">What is abstraction?</h2>
+
+<blockquote>
+<p>Our ability to group things by the way in which they differ, while regarding them as the same in every other respect.</p>
+</blockquote>
+<aside class="notes">
+<p>faculteit om zaken te groeperen<br>
+aan de hand van hun verschillen</p>
+<p>als we abstraheren dan zetten we juist iets <em>apart</em><br>
+en bundelen al het andere</p>
+</aside>
+</section><section class="center" lineno="84" data-line="84" data-h="8" data-v="0">
+<img src="..\assets\guitars.2021-05-07-11-35-57.png" height="500">
+<ul>
+<li>cardinality (&apos;4&apos;)</li>
+<li>size</li>
+<li>price</li>
+<li>position</li>
+<li>...</li>
+</ul>
+<aside class="notes">
+abstraheren met betrekking tot...
+<p>abstract heeft connotatie vaag,<br>
+maar is vereist om precies te zijn</p>
+</aside>
+</section><section lineno="100" class="slide " data-line="100" data-h="9" data-v="0">
+<h2 class="mume-header" id="abstraction-vs-precision">Abstraction vs precision</h2>
+
+<blockquote>
+<p>The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise.<br>
+<span class="author">-- Dijkstra</span></p>
+</blockquote>
+<aside class="notes">
+abstractie bepaalt waar we over kunnen praten/redeneren (&apos;semantisch niveau&apos;)
+<p>speelt grote rol<br>
+zeker nu software steeds meer losgekoppeld is van hardware-beperkingen</p>
+</aside>
+</section><section class="center" lineno="113" data-line="113" data-h="10" data-v="0">
+<img src="..\assets\business-card1.png">
+<aside class="notes">
+90s business card software
+- prints elements onto paper using specific printer instructions
+- supports 1 specific type of printer, accepts limited inputs (employee details)
+</aside>
+</section><section class="center" lineno="122" data-line="122" data-h="11" data-v="0">
+<img src="..\assets\business-card2.png">
+<aside class="notes">
+<p>abstractions:</p>
+<ul>
+<li>
+<p>more inputs?</p>
+</li>
+<li>
+<p>define elements (employee block, company block, label, details)</p>
+</li>
+<li>
+<p>define <em>position</em> on the canvas (left/right/top/bottom)<br>
+NB. &apos;correct&apos; abstractions depend on domain/requirements</p>
+</li>
+<li>
+<p>&apos;print&apos; -&gt; talk to a lib/interface to make the software printer-independent</p>
+</li>
+</ul>
+<p>hoger semantisch niveau: &apos;printopdracht verzenden&apos;</p>
+</aside>
+</section><section lineno="138" class="slide " data-line="138" data-h="12" data-v="0">
+<h2 class="mume-header" id="compositionality">Compositionality</h2>
+
+<blockquote>
+<p>Deconstruct a problem into elements that can be rearranged.</p>
+</blockquote>
+<p>Program:</p>
+<ul>
+<li>components</li>
+<li>interfaces</li>
+</ul>
+<p>Code:</p>
+<ul>
+<li>functions</li>
+<li>data structures</li>
+</ul>
+<aside class="notes">
+door te abstraheren naar het juiste semantische niveau;
+nuttige software bouwen door elementen te defini&#xEB;ren die we naar wens kunnen hercombineren
+<p>geldt zowel voor functionaliteit als voor inrichting van code</p>
+<p>voor verdere praatje zoomen we vnl in op code-niveau van abstractie</p>
+</aside>
+</section><section lineno="160" class="slide " data-line="160" data-h="13" data-v="0">
+<h1 class="mume-header" id="abstraction-recipes">Abstraction Recipes</h1>
+
+</section><section lineno="163" class="slide " data-line="163" data-h="14" data-v="0">
+<h3 class="mume-header" id="times-two">times two</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">twoTimesTwo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">threeTimesTwo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="python { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">two_times_two</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">2</span>
+
+
+<span class="token keyword">def</span> <span class="token function">three_times_two</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token number">3</span> <span class="token operator">*</span> <span class="token number">2</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<aside class="notes">
+stupide functies, lijken erg op elkaar
+<p>identiek: *2<br>
+verschil: 2 / 3<br>
+techniek: parametriseren</p>
+</aside>
+</section><section lineno="198" class="slide " data-line="198" data-h="15" data-v="0">
+<h3 class="mume-header" id="parametrise-1-doubletriple">Parametrise 1: Double/Triple</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">double</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> n <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">triple</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> n <span class="token operator">*</span> <span class="token number">3</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="Python { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">double</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token number">2</span>
+
+
+<span class="token keyword">def</span> <span class="token function">triple</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token number">3</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="225" class="slide " data-line="225" data-h="16" data-v="0">
+<h3 class="mume-header" id="parametrise-2-multiplication">Parametrise 2: Multiplication</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">multiply</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> a <span class="token operator">*</span> b
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">double</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token function">multiply</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">triple</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token function">multiply</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="Python { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">multiply</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">*</span> b
+
+
+<span class="token keyword">def</span> <span class="token function">double</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> multiply<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">triple</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> multiply<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<aside class="notes">
+hogere abstractie; vermenigvuldigen
+<p>identiek: x * x (binaire operatie)<br>
+techniek: parametriseren<br>
+herimplementeren in termen van abstractie</p>
+</aside>
+</section><section lineno="267" class="slide " data-line="267" data-h="17" data-v="0">
+<h2 class="mume-header" id="function-abstraction-recipe-1">Function Abstraction recipe 1</h2>
+
+<ol>
+<li><strong>compare</strong><br>
+<em>lookalike functions</em></li>
+<li><strong>connect</strong><br>
+<em>specify essential differences</em></li>
+<li><strong>change</strong><br>
+<em>parametrise, replace, redefine, eliminate</em></li>
+<li><strong>check</strong><br>
+<em>test!</em></li>
+<li><strong>challenge</strong><br>
+<em>use cases, edge cases, existing abstractions</em></li>
+</ol>
+<aside class="notes">
+1. find essential differences
+2. connect each difference to find matches
+3. replace and parametrise analogous values
+   and look at function signature
+   redefine implementation in terms of abstraction if needed
+4. test your changes (ideally: tests already in place)
+5. try to find more uses for the abstraction
+   check if the abstraction already exists in the language
+</aside>
+</section><section lineno="292" class="slide " data-line="292" data-h="18" data-v="0">
+<h3 class="mume-header" id="cats-dogs">Cats &amp; Dogs</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasDog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal <span class="token operator">==</span> <span class="token string">&apos;dog&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasCat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal <span class="token operator">==</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="python { .line-numbers }" class="language-python line-numbers">animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">hasDog</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> animal <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> animal <span class="token operator">==</span> <span class="token string">&apos;dog&apos;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+
+<span class="token keyword">def</span> <span class="token function">hasCat</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> animal <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> animal <span class="token operator">==</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+  
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<aside class="notes">
+1. compare
+<p>hasDog en hasCat lijken op elkaar</p>
+</aside>
+</section><section lineno="350" class="slide " data-line="350" data-h="19" data-v="0">
+<h3 class="mume-header" id="cats-dogs-1">Cats &amp; Dogs</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { highlight=[7, 15] }" class="language-javascript" data-line="7,15"><span class="token keyword">const</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasDog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal <span class="token operator">==</span> <span class="token string">&apos;dog&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasCat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal <span class="token operator">==</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">)</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="7" data-start="7">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="15" data-start="15">
+</div></div></pre><pre data-role="codeBlock" data-info="python { highlight=[7, 15] }" class="language-python" data-line="7,15">animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">hasDog</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> animal <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> animal <span class="token operator">==</span> <span class="token string">&apos;dog&apos;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+
+<span class="token keyword">def</span> <span class="token function">hasCat</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> animal <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> animal <span class="token operator">==</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="7" data-start="7">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="15" data-start="15">
+</div></div></pre></div>
+<aside class="notes">
+2. connect 
+<p>essentieel verschil: &apos;dog&apos;, &apos;cat&apos;<br>
+nieuw semantisch niveau: (bedenk een term)  &apos;kind&apos;</p>
+</aside>
+</section><section lineno="407" class="slide " data-line="407" data-h="20" data-v="0">
+<h3 class="mume-header" id="cats-dogs-2">Cats &amp; Dogs</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { highlight=[7, 14, 17] }" class="language-javascript" data-line="7,14,17"><span class="token keyword">const</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasAnimal</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">kind<span class="token punctuation">,</span> animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>kind <span class="token operator">==</span> animal<span class="token punctuation">)</span>
+      <span class="token keyword control-flow">return</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword control-flow">return</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+  
+<span class="token keyword">const</span> <span class="token function-variable function">hasDog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> 
+  <span class="token function">hasAnimal</span><span class="token punctuation">(</span><span class="token string">&apos;dog&apos;</span><span class="token punctuation">,</span> animals<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasCat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+  <span class="token function">hasAnimal</span><span class="token punctuation">(</span><span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> animals<span class="token punctuation">)</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="7" data-start="7">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="14" data-start="14">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="17" data-start="17">
+</div></div></pre><pre data-role="codeBlock" data-info="python { highlight=[7, 14, 17] }" class="language-python" data-line="7,14,17">animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">hasAnimal</span><span class="token punctuation">(</span>kind<span class="token punctuation">,</span> animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> animal <span class="token keyword">in</span> animals<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> animal <span class="token operator">==</span> kind<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+
+<span class="token keyword">def</span> <span class="token function">hasDog</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> hasAnimal<span class="token punctuation">(</span><span class="token string">&apos;dog&apos;</span><span class="token punctuation">,</span> animals<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">hasCat</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> hasAnimal<span class="token punctuation">(</span><span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> animals<span class="token punctuation">)</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="7" data-start="7">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="14" data-start="14">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="17" data-start="17">
+</div></div></pre></div>
+<aside class="notes">
+<ol start="3">
+<li>change</li>
+</ol>
+<ul>
+<li>refactor to higher abstraction (hasAnimals)</li>
+<li>reimplement old functions in terms of new one</li>
+</ul>
+<ol start="4">
+<li>check correctness</li>
+</ol>
+</aside>
+</section><section lineno="464" class="slide " data-line="464" data-h="21" data-v="0">
+<h3 class="mume-header" id="cats-dogs-3">Cats &amp; Dogs</h3>
+
+<div class="row">
+<pre data-role="codeBlock" data-info="javascript { highlight=[6, 9] }" class="language-javascript" data-line="6,9"><span class="token keyword">const</span> animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasDog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> 
+  animals<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span><span class="token string">&apos;dog&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">hasCat</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+  animals<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span><span class="token string">&apos;cat&apos;</span><span class="token punctuation">)</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="6" data-start="6">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="9" data-start="9">
+</div></div></pre><pre data-role="codeBlock" data-info="python { highlight=[6, 9] }" class="language-python" data-line="6,9">animals <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;giraffe&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;cat&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;elephant&apos;</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">hasDog</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;dog&apos;</span> <span class="token keyword">in</span> animals
+
+<span class="token keyword">def</span> <span class="token function">hasCat</span><span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;cat&apos;</span> <span class="token keyword">in</span> animals
+<div class="line-highlight-wrapper">
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="6" data-start="6">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="9" data-start="9">
+</div></div></pre></div>
+<aside class="notes">
+<ol start="5">
+<li>challenge<br>
+turns out we don&apos;t need the hasAnimals function<br>
+because there&apos;s a language construct that already implements the required operation</li>
+</ol>
+<p>dat is recept #1: abstraheren van functies die op elkaar lijken<br>
+(en daarmee het voorkomen van duplicatie)</p>
+</aside>
+</section><section lineno="506" class="slide " data-line="506" data-h="22" data-v="0">
+<h2 class="mume-header" id="oldest-vertebrate">Oldest vertebrate</h2>
+
+<p>Given a set of animals, find out which animal is oldest (relative to human years).<br>
+We are interested only in vertebrates.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># Goldfish</span>
+age * <span class="token number">5</span>
+
+<span class="token comment"># Dog</span>
+<span class="token number">16</span> * ln<span class="token punctuation">(</span>age<span class="token punctuation">)</span> + <span class="token number">31</span>
+
+<span class="token comment"># Cat</span>
+<span class="token number">1</span> <span class="token operator">=</span> <span class="token number">15</span>
+<span class="token number">2</span> <span class="token operator">=</span> <span class="token number">25</span>
+<span class="token punctuation">(</span>age - <span class="token number">2</span><span class="token punctuation">)</span> * <span class="token number">4</span> + <span class="token number">25</span>
+</pre><aside class="notes">
+<p>gewervelden</p>
+<p>3 formules (gesimplificeerd)</p>
+</aside>
+</section><section lineno="532" class="slide " data-line="532" data-h="23" data-v="0">
+<h2 class="mume-header" id="naive-implementation">Naive implementation</h2>
+
+<div class="row" style="max-height: 900px">
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">getRelativelyOldestVertebrate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span> relativeAge<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">isVertebrate</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> relativeAge <span class="token operator">=</span> <span class="token number">0</span>
+
+      <span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">genus</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&apos;carassius&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          relativeAge <span class="token operator">=</span> animal<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">*</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span> <span class="token keyword">case</span> <span class="token string">&apos;canis&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          relativeAge <span class="token operator">=</span>
+            <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">round</span><span class="token punctuation">(</span><span class="token number">16</span> <span class="token operator">*</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">case</span> <span class="token string">&apos;felis&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span> relativeAge <span class="token operator">=</span> <span class="token number">15</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span> relativeAge <span class="token operator">=</span> <span class="token number">25</span>
+            <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              relativeAge <span class="token operator">=</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">25</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// compare relative age to eldest so far</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>relativeAge <span class="token operator">&gt;</span> eldest<span class="token punctuation">.</span><span class="token property-access">relativeAge</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token punctuation">,</span> relativeAge <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> eldest
+<span class="token punctuation">}</span>
+</pre></div>
+</section><section lineno="574" class="slide " data-line="574" data-h="24" data-v="0">
+<h2 class="mume-header" id="naive-implementation-1">Naive implementation</h2>
+
+<div class="row" style="max-height: 900px">
+<pre data-role="codeBlock" data-info="javascript { highlight=[10, 12-13, 15-20, 8-23 ] } dragon" class="language-javascript" data-line="10,12-13,15-20,8-23"><span class="token keyword">const</span> <span class="token function-variable function">getRelativelyOldestVertebrate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span> relativeAge<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">isVertebrate</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> relativeAge <span class="token operator">=</span> <span class="token number">0</span>
+
+      <span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">genus</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token string">&apos;carassius&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          relativeAge <span class="token operator">=</span> animal<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">*</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span> <span class="token keyword">case</span> <span class="token string">&apos;canis&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          relativeAge <span class="token operator">=</span>
+            <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">round</span><span class="token punctuation">(</span><span class="token number">16</span> <span class="token operator">*</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">case</span> <span class="token string">&apos;felis&apos;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span> relativeAge <span class="token operator">=</span> <span class="token number">15</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span> relativeAge <span class="token operator">=</span> <span class="token number">25</span>
+            <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+              relativeAge <span class="token operator">=</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">25</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// compare relative age to eldest so far</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>relativeAge <span class="token operator">&gt;</span> eldest<span class="token punctuation">.</span><span class="token property-access">relativeAge</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token punctuation">,</span> relativeAge <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> eldest
+<span class="token punctuation">}</span>
+<div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="10" data-start="10">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="12-13" data-start="12" data-end="13">
+
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="15-20" data-start="15" data-end="20">
+
+
+
+
+
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="8-23" data-start="8" data-end="23">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></pre></div>
+</section><section lineno="616" class="slide " data-line="616" data-h="25" data-v="0">
+<h2 class="mume-header" id="domain-abstraction">Domain abstraction</h2>
+
+<ol>
+<li><strong>identify</strong> (complexity)</li>
+<li><strong>demarcate</strong></li>
+<li><strong>extract</strong></li>
+<li><strong>check</strong></li>
+<li><strong>challenge</strong></li>
+</ol>
+<aside class="notes">
+<ol>
+<li>tell the story of the function. mental &apos;brackets&apos; = good starting point for boundary</li>
+<li>find the exact boundaries of responsibilities</li>
+<li>extract the bounded parts</li>
+</ol>
+</aside>
+</section><section lineno="632" class="slide " data-line="632" data-h="26" data-v="0">
+<h2 class="mume-header" id="better-implementation">Better implementation</h2>
+
+<div class="row" style="max-height: 900px">
+<pre data-role="codeBlock" data-info="javascript { highlight=[1, 5, 9, 19, 33]}" class="language-javascript" data-line="1,5,9,19,33"><span class="token keyword">const</span> <span class="token function-variable function">relativeGoldfishAge</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fish</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> fish<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">*</span> <span class="token number">5</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">relativeDogAge</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">dog</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">round</span><span class="token punctuation">(</span><span class="token number">16</span> <span class="token operator">*</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span>dog<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">31</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">relativeCatAge</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">cat</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">switch</span> <span class="token punctuation">(</span>cat<span class="token punctuation">.</span><span class="token property-access">age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token number">15</span>
+    <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token number">25</span>
+    <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>cat<span class="token punctuation">.</span><span class="token property-access">age</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">+</span> <span class="token number">25</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">getRelativeAge</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animal</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">switch</span><span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">genus</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;carassius&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeGoldfishAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;canis&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeDogAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;felis&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeCatAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">getRelativelyOldestVertebrate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animals</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span> relativeAge<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> animal <span class="token keyword">of</span> animals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">isVertebrate</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> relativeAge <span class="token operator">=</span> <span class="token function">getRelativeAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+
+      <span class="token comment">// compare relative age to eldest so far</span>
+      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>relativeAge <span class="token operator">&gt;</span> eldest<span class="token punctuation">.</span><span class="token property-access">relativeAge</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        eldest <span class="token operator">=</span> <span class="token punctuation">{</span> animal<span class="token punctuation">,</span> relativeAge <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> eldest
+<span class="token punctuation">}</span>
+<div class="line-highlight-wrapper"><div aria-hidden="true" class="line-highlight" data-range="1" data-start="1">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="5" data-start="5">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="9" data-start="9">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="19" data-start="19">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="33" data-start="33">
+</div></div></pre><aside class="notes">
+alle 4 de geneste &apos;verhalen&apos; ge&#xEB;xtraheerd (dezelfde code!)
+<ul>
+<li>
+<p>aparte functies die aansluiten bij concepten in domein</p>
+</li>
+<li>
+<p>breuklijnen:</p>
+<ul>
+<li>formules voor relatieve ouderdom</li>
+<li>bepalen van diersoort</li>
+</ul>
+</li>
+<li>
+<p>de abstractie stelt ons in staat langs die breuklijnen complexiteit toe te voegen<br>
+(veel meer dieren? complexere formules?)</p>
+</li>
+</ul>
+</aside>
+</div>
+</section><section lineno="696" class="slide " data-line="696" data-h="27" data-v="0">
+<h2 class="mume-header" id="domain-abstraction-1">Domain abstraction</h2>
+
+<ol>
+<li><strong>identify</strong></li>
+<li><strong>demarcate</strong></li>
+<li><strong>extract</strong></li>
+<li><strong>check</strong></li>
+<li><strong>challenge</strong></li>
+</ol>
+<aside class="notes">
+<ol start="4">
+<li>check, test</li>
+<li>check that the code became more readable, maintainable, and that terms reflect the domain</li>
+</ol>
+<p>recept 2: domeinabstractie<br>
+doel: reflecteer het domein met het juiste semantische niveau <em>in de code</em></p>
+<p>volgende deel: nog een ander soort abstractie (portal abstraction)<br>
+voor een n&#xF3;g betere implementatie van deze code</p>
+</aside>
+</section><section lineno="717" class="slide " data-line="717" data-h="28" data-v="0">
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="..\assets\portal1.png" height="500" style="margin-right: 25px;">
+<h1>Portal Abstractions</h1>
+  <img src="..\assets\portal2.png" height="500" style="margin-left: 25px;">
+</div>
+<aside class="notes">
+<ul>
+<li>
+<p>portal abstraction is een abstractie waarbij, als je een probleem hebt dat in het patroon van de abstractie past, er een wereld van mogelijkheden voor je opengaat.</p>
+</li>
+<li>
+<p>alle mogelijkheden van de abstractie zijn dan tot je beschikking</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="733" class="slide " data-line="733" data-h="29" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token number">3</span> <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token number">6</span> <span class="token operator">/</span> <span class="token number">4</span>
+</pre><pre data-role="codeBlock" data-info="py" class="language-python"><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token number">3</span> <span class="token operator">*</span> <span class="token number">2</span>
+<span class="token number">6</span> <span class="token operator">/</span> <span class="token number">4</span>
+</pre></div>
+<aside class="notes">
+<ul>
+<li>
+<p>een voorbeeld van een portal abstraction hebben jullie al gezien</p>
+</li>
+<li>
+<p>een getal is al een abstract iets: het vertegenwoordigd de kwantiteit van <em>iets</em></p>
+</li>
+<li>
+<p>als je iets tot een getal kan abstraheren heb je ineens toegang tot alle mogelijkheden die getallen bieden</p>
+</li>
+<li>
+<p>ie. aritmetische handelingen zoals optellen, vermenigvuldigen en delen</p>
+</li>
+<li>
+<p>behoort tot vaste kern van elke taal</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="764" class="slide " data-line="764" data-h="30" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">multiply</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> x <span class="token operator">*</span> y
+<span class="token punctuation">}</span>
+</pre><pre data-role="codeBlock" data-info="py" class="language-python"><span class="token keyword">def</span> <span class="token function">multiply</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> x <span class="token operator">*</span> y
+</pre></div>
+<aside class="notes">
+<ul>
+<li>
+<p>zoals net al gezien is dit verder te abstraheren met variabele waardes</p>
+</li>
+<li>
+<p>voorbeeld tonen van nog een portal abstraction die betrekking heeft op <em>sequences</em></p>
+</li>
+</ul>
+</aside>
+</section><section lineno="789" class="slide " data-line="789" data-h="31" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+</pre><pre data-role="codeBlock" data-info="py" class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+</pre></div>
+<aside class="notes">
+<ul>
+<li>
+<p>stel je hebt een sequence van getallen - een array in js, of een lijst in python</p>
+</li>
+<li>
+<p>we willen bepaalde handelingen doen adhv deze sequence, zoals bijvoorbeeld de totale som berekenen</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="808" class="slide " data-line="808" data-h="32" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">sum</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">numbers</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> accumulator <span class="token operator">=</span> <span class="token number">0</span>
+
+  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> n <span class="token keyword">of</span> numbers<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    accumulator <span class="token operator">=</span> accumulator <span class="token operator">+</span> n
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> accumulator
+<span class="token punctuation">}</span>
+
+<span class="token function">sum</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span> <span class="token comment">//? 25</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    accumulator <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">for</span> n <span class="token keyword">in</span> numbers<span class="token punctuation">:</span>
+        accumulator <span class="token operator">=</span> accumulator <span class="token operator">+</span> n
+    
+    
+    <span class="token keyword">return</span> accumulator
+
+
+<span class="token builtin">sum</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span> <span class="token comment">#? 25</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<aside class="notes">
+<ul>
+<li>
+<p>functie die sequence van numbers als parameter heeft</p>
+</li>
+<li>
+<p>accumulator die start op 0</p>
+</li>
+<li>
+<p>gaan elk getal in de sequence af en tellen die bij de accumulator op</p>
+</li>
+<li>
+<p>als er geen getallen meer zijn geven we de accumulator terug als resultaat</p>
+</li>
+<li>
+<p>zgn imperatieve stijl - wil jullie ook recursieve variant laten zien</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="860" class="slide " data-line="860" data-h="33" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">recursiveSum</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">numbers<span class="token punctuation">,</span> accumulator <span class="token operator">=</span> <span class="token number">0</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>currentNumber<span class="token punctuation">,</span> <span class="token spread operator">...</span>remainingNumbers<span class="token punctuation">]</span> <span class="token operator">=</span> numbers
+
+  <span class="token keyword control-flow">return</span> <span class="token function">recursiveSum</span><span class="token punctuation">(</span>remainingNumbers<span class="token punctuation">,</span> accumulator <span class="token operator">+</span> currentNumber<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">recursive_sum</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> accumulator<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> accumulator
+    
+    current_number<span class="token punctuation">,</span> <span class="token operator">*</span>remaining_numbers <span class="token operator">=</span> numbers
+
+    <span class="token keyword">return</span> recursive_sum<span class="token punctuation">(</span>remaining_numbers<span class="token punctuation">,</span> accumulator <span class="token operator">+</span> current_number<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<aside class="notes">
+<ul>
+<li>
+<p>net als bij imperatieve versie een accumulator</p>
+</li>
+<li>
+<p>net als bij imperatieve versie geven we accumulator terug als de getallen op zijn</p>
+</li>
+<li>
+<p>anders dan imperatieve versie delen we de lijst van getallen op in het eerste element en de rest</p>
+</li>
+<li>
+<p>daarna roept de functie zichzelf aan, en geven we als numbers de rest mee, en als accumulator doen we de huidige accumulator PLUS de huidige waarde</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="898" class="slide " data-line="898" data-h="34" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">product</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">numbers<span class="token punctuation">,</span> accumulator <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>current<span class="token punctuation">,</span> <span class="token spread operator">...</span>remaining<span class="token punctuation">]</span> <span class="token operator">=</span> numbers
+
+  <span class="token keyword control-flow">return</span> <span class="token function">product</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token operator">*</span> current<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">product</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> accumulator<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> accumulator
+
+    current<span class="token punctuation">,</span> <span class="token operator">*</span>remaining <span class="token operator">=</span> numbers
+
+    <span class="token keyword">return</span> product<span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token operator">*</span> current<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="924" class="slide " data-line="924" data-h="35" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> conditions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">all</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">conditions<span class="token punctuation">,</span> accumulator <span class="token operator">=</span> <span class="token boolean">true</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>conditions<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>current<span class="token punctuation">,</span> <span class="token spread operator">...</span>remaining<span class="token punctuation">]</span> <span class="token operator">=</span> conditions
+
+  <span class="token keyword control-flow">return</span> <span class="token function">all</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">all</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token comment">//? false</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers">conditions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">all</span><span class="token punctuation">(</span>conditions<span class="token punctuation">,</span> accumulator<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> accumulator
+
+    current<span class="token punctuation">,</span> <span class="token operator">*</span>remaining <span class="token operator">=</span> conditions
+
+    <span class="token keyword">return</span> <span class="token builtin">all</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token keyword">and</span> current<span class="token punctuation">)</span>
+
+
+<span class="token builtin">all</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token comment">#? False</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="960" class="slide " data-line="960" data-h="36" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> conditions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">any</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">conditions<span class="token punctuation">,</span> accumulator <span class="token operator">=</span> <span class="token boolean">false</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>conditions<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>current<span class="token punctuation">,</span> <span class="token spread operator">...</span>remaining<span class="token punctuation">]</span> <span class="token operator">=</span> conditions
+
+  <span class="token keyword control-flow">return</span> <span class="token function">any</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token operator">||</span> current<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">any</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token comment">//? true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers">conditions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">any</span><span class="token punctuation">(</span>conditions<span class="token punctuation">,</span> accumulator<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> accumulator
+
+    current<span class="token punctuation">,</span> <span class="token operator">*</span>remaining <span class="token operator">=</span> conditions
+
+    <span class="token keyword">return</span> <span class="token builtin">any</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> accumulator <span class="token keyword">or</span> current<span class="token punctuation">)</span>
+
+
+<span class="token builtin">any</span><span class="token punctuation">(</span>conditions<span class="token punctuation">)</span> <span class="token comment">#? True</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="995" class="slide " data-line="995" data-h="37" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { highlight=[1, 5, 11] }" class="language-javascript" data-line="1,5,11"><span class="token keyword">const</span> <span class="token function-variable function">binaryOperation</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">item1<span class="token punctuation">,</span> item2</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token operator">??</span><span class="token operator">?</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">fn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">items<span class="token punctuation">,</span> accumulator</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>items<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+  
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>current<span class="token punctuation">,</span> <span class="token spread operator">...</span>remaining<span class="token punctuation">]</span> <span class="token operator">=</span> items
+
+  <span class="token keyword control-flow">return</span> <span class="token function">fn</span><span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> <span class="token function">binaryOperation</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> current<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<div class="line-highlight-wrapper"><div aria-hidden="true" class="line-highlight" data-range="1" data-start="1">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="5" data-start="5">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="11" data-start="11">
+</div></div></pre><pre data-role="codeBlock" data-info="py { highlight=[1, 5, 11] }" class="language-python" data-line="1,5,11"><span class="token keyword">def</span> <span class="token function">binary_operation</span><span class="token punctuation">(</span>item1<span class="token punctuation">,</span> item2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> ???
+
+
+<span class="token keyword">def</span> <span class="token function">fn</span><span class="token punctuation">(</span>items<span class="token punctuation">,</span> accumulator<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> accumulator
+  
+  current<span class="token punctuation">,</span> <span class="token operator">*</span>remaining <span class="token operator">=</span> items
+
+  <span class="token keyword">return</span> fn<span class="token punctuation">(</span>remaining<span class="token punctuation">,</span> binary_operation<span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> current<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<div class="line-highlight-wrapper"><div aria-hidden="true" class="line-highlight" data-range="1" data-start="1">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="5" data-start="5">
+</div></div><div class="line-highlight-wrapper">
+
+
+
+
+
+
+
+
+
+<div aria-hidden="true" class="line-highlight" data-range="11" data-start="11">
+</div></div></pre></div>
+</section><section lineno="1029" class="slide " data-line="1029" data-h="38" data-v="0">
+<div style="text-align: center;">
+  <img src="..\assets\reduce.jpg">
+</div>
+</section><section lineno="1035" class="slide " data-line="1035" data-h="39" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">reduce</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> items<span class="token punctuation">,</span> accumulator</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>items<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword control-flow">return</span> accumulator
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>current<span class="token punctuation">,</span> <span class="token spread operator">...</span>remaining<span class="token punctuation">]</span> <span class="token operator">=</span> items
+
+  <span class="token keyword control-flow">return</span> <span class="token function">reduce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> remaining<span class="token punctuation">,</span> <span class="token function">fn</span><span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> current<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</pre><pre data-role="codeBlock" data-info="py" class="language-python"><span class="token keyword">def</span> <span class="token function">reduce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> items<span class="token punctuation">,</span> accumulator<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+      <span class="token keyword">return</span> accumulator
+    
+    current<span class="token punctuation">,</span> <span class="token operator">*</span>remaining <span class="token operator">=</span> items
+
+    <span class="token keyword">return</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> remaining<span class="token punctuation">,</span> fn<span class="token punctuation">(</span>accumulator<span class="token punctuation">,</span> current<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre></div>
+</section><section lineno="1061" class="slide " data-line="1061" data-h="40" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> x <span class="token operator">+</span> y
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+numbers<span class="token punctuation">.</span><span class="token method function property-access">reduce</span><span class="token punctuation">(</span>add<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">//?</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers"><span class="token keyword">from</span> functools <span class="token keyword">import</span> <span class="token builtin">reduce</span>
+
+<span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> x <span class="token operator">+</span> y
+
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token builtin">reduce</span><span class="token punctuation">(</span>add<span class="token punctuation">,</span> numbers<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="1087" class="slide " data-line="1087" data-h="41" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">addOne</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> x <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+
+numbers<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span>addOne<span class="token punctuation">)</span> <span class="token comment">//? [2, 3, 4, 5, 6]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">isEven</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+
+numbers<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span>isEven<span class="token punctuation">)</span> <span class="token comment">//? [2, 4]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+<span class="token keyword">def</span> <span class="token function">add_one</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> x <span class="token operator">+</span> <span class="token number">1</span>
+
+
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>add_one<span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#? [2, 3, 4, 5, 6]</span>
+
+<span class="token keyword">def</span> <span class="token function">is_even</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span>
+
+
+<span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span>is_even<span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#? [2, 4]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="1124" class="slide " data-line="1124" data-h="42" data-v="0">
+<div class="row">
+<pre data-role="codeBlock" data-info="js { .line-numbers }" class="language-javascript line-numbers"><span class="token keyword">const</span> <span class="token function-variable function">isVertebrate</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animal</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> animal<span class="token punctuation">.</span><span class="token property-access">isVertebrate</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">getRelativeAge</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">animal</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">switch</span><span class="token punctuation">(</span>animal<span class="token punctuation">.</span><span class="token property-access">genus</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;carassius&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeGoldfishAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;canis&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeDogAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> <span class="token string">&apos;felis&apos;</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token function">relativeCatAge</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+    <span class="token keyword module">default</span><span class="token operator">:</span> <span class="token keyword control-flow">return</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">getEldest</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">age1<span class="token punctuation">,</span> age2</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> age1 <span class="token operator">&gt;</span> age2 <span class="token operator">?</span> age1 <span class="token operator">:</span> age2
+<span class="token punctuation">}</span>
+
+animals
+  <span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span>isVertebrate<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span>getRelativeAge<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token method function property-access">reduce</span><span class="token punctuation">(</span>getEldest<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><pre data-role="codeBlock" data-info="py { .line-numbers }" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">is_vertebrate</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> animal<span class="token punctuation">[</span><span class="token string">&apos;isVertebrate&apos;</span><span class="token punctuation">]</span>
+
+
+<span class="token keyword">def</span> <span class="token function">get_relative_age</span><span class="token punctuation">(</span>animal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">if</span> animal<span class="token punctuation">[</span><span class="token string">&apos;genus&apos;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&apos;carassius&apos;</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> relative_goldfish_age<span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> animal<span class="token punctuation">[</span><span class="token string">&apos;genus&apos;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&apos;canis&apos;</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> relative_dog_age<span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> animal<span class="token punctuation">[</span><span class="token string">&apos;genus&apos;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&apos;felis&apos;</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> relative_cat_age<span class="token punctuation">(</span>animal<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token number">0</span>
+
+<span class="token keyword">def</span> <span class="token function">get_eldest</span><span class="token punctuation">(</span>age1<span class="token punctuation">,</span> age2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> age1 <span class="token keyword">if</span> age1 <span class="token operator">&gt;</span> age2 <span class="token keyword">else</span> age2
+
+
+vertebrates <span class="token operator">=</span> <span class="token builtin">filter</span><span class="token punctuation">(</span>is_vertebrate<span class="token punctuation">,</span> animals<span class="token punctuation">)</span>
+ages <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span>get_relative_age<span class="token punctuation">,</span> vertebrates<span class="token punctuation">)</span>
+eldest <span class="token operator">=</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span>get_eldest<span class="token punctuation">,</span> ages<span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+</section><section lineno="1178" class="slide " data-line="1178" data-h="43" data-v="0">
+<h1 class="mume-header" id="zen-mastery">Zen mastery</h1>
+
+</section><section lineno="1182" class="slide " data-line="1182" data-h="44" data-v="0">
+<h2 class="mume-header" id="abstraction-1">Abstraction</h2>
+
+<ul>
+<li>find the right semantic level</li>
+</ul>
+<p>2 abstraction recipes to get:</p>
+<ul>
+<li>DRY code</li>
+<li>that reflects the problem domain</li>
+<li>and is open for extension</li>
+</ul>
+<aside class="notes">
+<p>abstractie in software</p>
+<ul>
+<li>semantische niveaus bepalen waar we het over kunnen hebben</li>
+<li>en dus ook welke functionaliteit er bestaat</li>
+<li>verzorgt flexibiliteit (als het domein goed wordt gereflecteerd)</li>
+</ul>
+<p>abstraheren van functies</p>
+<ul>
+<li>voorkomt duplicatie</li>
+<li>verbetert leesbaarheid</li>
+<li>brengt het domein naar voren (abstracties vergen namen (semantisch niveau!))</li>
+<li>bereidt code voor op wijzigingen (open voor extensie)</li>
+</ul>
+</aside>
+</section><section lineno="1205" class="slide " data-line="1205" data-h="45" data-v="0">
+<h2 class="mume-header" id="portal-abstractions">Portal abstractions</h2>
+
+<ul>
+<li>are used to solve a <em>class</em> of problems</li>
+<li>allow higher-level reasoning</li>
+<li>require you to study your trade</li>
+</ul>
+<aside class="notes">
+knowing your trade provides portal abstractions
+<p>examples:</p>
+<ul>
+<li>higher-order functions &amp; function chaining</li>
+<li>collection-based programming</li>
+<li>reactive programming</li>
+<li>monads<br>
+or OOP patterns like</li>
+<li>observer-subscriber</li>
+<li>builder pattern</li>
+</ul>
+</aside>
+</section><section lineno="1224" class="slide " data-line="1224" data-h="46" data-v="0">
+<h2 class="mume-header" id="abstraction-downsides">Abstraction: downsides</h2>
+
+<h4 class="mume-header" id="the-trade-offs">The trade-offs:</h4>
+
+<ul>
+<li>indirection</li>
+<li>complexity</li>
+<li>time and effort</li>
+<li>polish</li>
+</ul>
+<blockquote>
+<p>Simple is better than complex.<br>
+Complex is better than complicated.<br>
+<span class="author">-- Zen of Python</span></p>
+</blockquote>
+<aside class="notes">
+complexity: zen of python
+(complex; many moving parts, ok if it follows a pattern, complicated if it does not)
+sometimes hard to tell the difference :)
+<p>polish: an abstracted version may have many more use-cases, requiring much more knowledge to implement or effort to build<br>
+(e.g. 2*2 vs multiply -&gt; arity? bigint support? infinity?)</p>
+</aside>
+</section><section class="center" lineno="1246" data-line="1246" data-h="47" data-v="0">
+<h2 class="mume-header" id="over-engineering">Over-engineering</h2>
+
+<img src="..\assets\over-engineering.2021-05-24-19-31-02.png" height="500">
+<aside class="notes">
+Apprentice: busy getting code to work
+Journeyman: eagerly applying the latest portal abstraction
+Zen master: learned to be pragmatic
+</aside>
+</section><section lineno="1257" class="slide " data-line="1257" data-h="48" data-v="0">
+<h2 class="mume-header" id="when-not-to-abstract">When (not) to abstract</h2>
+
+<h4 class="mume-header" id="bad-reasons">Bad reasons:</h4>
+
+<ul>
+<li>reduce lines of code</li>
+<li>eliminate things that are similar</li>
+<li>eliminate things that are identical</li>
+</ul>
+<h4 class="mume-header" id="the-dry-pitfall">The DRY pitfall:</h4>
+
+<blockquote>
+<p>Every piece of <strong>knowledge</strong> must have a single, unambiguous, authoritative representation within a system.</p>
+</blockquote>
+<p>&quot;knowledge&quot; not &quot;code&quot;</p>
+<aside class="notes">
+<ul>
+<li>
+<p>just preventing copy pasting a few lines is not a good enough reason</p>
+</li>
+<li>
+<p>abstracting too early means you probably haven&apos;t seen all the shapes of the problem yet</p>
+</li>
+<li>
+<p>trade off between indirection, readability, effort</p>
+</li>
+<li>
+<p>interpreting DRY to mean you should not have duplicate code.<br>
+Removing duplicate code might not be removing duplicate knowledge and having duplicate/similar code doesn&apos;t necessarily mean you&apos;re duplicating knowledge.</p>
+</li>
+<li>
+<p>even if two things are EXACTLY the same, they can be SEMANTICALLY different, and then SHOULD be different<br>
+analogy: if price of two products happens to be the same, it is incorrect to have only 1 place where the price is defined for both<br>
+(case: mocks.options vs FE-defined options)</p>
+</li>
+</ul>
+</aside>
+</section><section lineno="1285" class="slide " data-line="1285" data-h="49" data-v="0">
+<h2 class="mume-header" id="when-not-to-abstract-1">When (not) to abstract</h2>
+
+<h4 class="mume-header" id="bad-reasons-1">Bad reasons:</h4>
+
+<ul>
+<li>reduce lines of code</li>
+<li>eliminate things that are similar</li>
+<li>eliminate things that are identical</li>
+</ul>
+<h4 class="mume-header" id="good-reasons">Good reasons:</h4>
+
+<ul>
+<li>establish single point of control</li>
+<li>reflect the domain</li>
+<li>enable extension</li>
+<li><em>simplify</em> through a portal abstraction</li>
+</ul>
+<h4 class="mume-header" id="when">When:</h4>
+
+<ul>
+<li>once you know the edge cases (rule of three)</li>
+</ul>
+</section><section lineno="1301" class="slide " data-line="1301" data-h="50" data-v="0">
+<h2 class="mume-header" id="youve-made-it">You&apos;ve made it!</h2>
+
+<img src="..\assets\zen-of-computers.2021-05-24-21-24-58.png" height="500">
+</section><section lineno="1305" class="slide " data-line="1305" data-h="51" data-v="0">
+<h2 class="mume-header" id="questions">Questions?</h2>
+
+</section><section data-background-image="..\\assets\\cattype.gif" data-transition="zoom" lineno="1308" class="slide " data-line="1308" data-h="52" data-v="0">
+<h2 class="mume-header" id="thanks">Thanks!</h2>
+
+</section>
+      </div>
+    </div>
+    
+      </div>
+      
+      
+    
+    
+      <script>
+        Reveal.initialize({"margin":0.1,"enableSpeakerNotes":true,"slideNumber":false,"controls":false,"viewDistance":10,"width":1920,"height":1080,"dependencies":[{"src":"c:\\Users\\dtjve\\.vscode\\extensions\\shd101wyy.markdown-preview-enhanced-0.5.18\\node_modules\\@shd101wyy\\mume\\dependencies\\reveal\\plugin\\notes\\notes.js","async":true}]})
+      </script>
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
